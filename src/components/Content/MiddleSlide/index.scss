@@ -1,0 +1,66 @@
+@import '../../extensions.scss';
+
+.slide.middle-slide {
+    .post-details {
+        $spacing: 1rem;
+
+        @extend .fullAbsoluteContainer;
+        padding: $spacing;
+
+        .post-header {
+            position: absolute;
+            left: $spacing;
+            right: $spacing;
+            top: $spacing;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .post-location {
+                @extend .translucentRoundedContainer;
+
+                .icon {
+                    margin-right: 8px;
+                }
+            }
+
+            .post-actions {
+                .post-action {
+                    float: left;
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-right: 2.5rem;
+                    @extend .textShadow;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .icon {
+                        margin-left: .5rem;
+                        font-size: 20px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+        .post-footer {
+            position: absolute;
+            left: $spacing;
+            right: $spacing;
+            bottom: $spacing;
+
+            .post-about {
+                @extend .translucentRoundedContainer;
+
+                .expand {
+                    margin-left: 4px;
+                    color: #dddddd;
+                }
+            }
+        }
+    }
+}

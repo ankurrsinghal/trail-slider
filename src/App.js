@@ -1,25 +1,57 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import './App.scss';
+
+import Content from './components/Content'
+import Sidebar from './components/Sidebar'
 
 class App extends Component {
+
+  state = {
+    info: {
+      name: ''
+    },
+    posts: [],
+    author: {
+      name: ''
+    },
+    isLoading: true
+  }
+
+  async componentDidMount() {
+    const { data } = await import('./data.json')
+    const { info, posts, author } = data
+    console.log(data)
+    this.setState({
+      info,
+      posts,
+      author,
+      isLoading: false
+    })
+  }
+
   render() {
+    const {
+      info,
+      posts,
+      author,
+      isLoading
+    } = this.state
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="trell-app">
+        {
+          isLoading ?
+          (
+            'Loading'
+          )
+          :
+          (
+            <Fragment>
+              <Content author={author} info={info} posts={posts} />
+              <Sidebar info={info} />
+            </Fragment>
+          )
+        }
       </div>
     );
   }

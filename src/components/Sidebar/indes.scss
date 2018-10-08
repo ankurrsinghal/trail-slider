@@ -1,0 +1,46 @@
+.trell-sidebar {
+    $footerSize: 40px;
+
+    color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: $footerSize 2rem;
+
+    .trell-suggestions {
+        flex-grow: 1;
+    }
+
+    .trell-mobile-links {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $footerSize;
+
+        padding: 0 .75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3D3D3D;
+
+        .label {
+            font-size: 13px;
+        }
+
+        .trell-mobile-link {
+            padding: .25rem .75rem;
+            border-radius: 100px;
+            font-size: 12px;
+            background-color: #6C6C6C;
+
+            i {
+                padding: 0 .25rem;
+            }
+
+            &.ios {
+                margin-left: .5rem;
+            }
+        }
+    }
+}

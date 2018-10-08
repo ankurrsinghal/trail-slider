@@ -1,0 +1,38 @@
+.trell-content {
+
+    $topSpacing: 2em;
+    $leftSpacing: 10em;
+
+    padding: $topSpacing $leftSpacing;
+    position: relative;
+
+    .slider-controls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding: $leftSpacing/4;
+
+        .slider-control {
+            cursor: pointer;
+
+            &[disabled] {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+
+            &.previous {
+                margin-right: auto;
+            }
+            
+            &.next {
+                margin-left: auto;
+            }
+        }
+    }
+}

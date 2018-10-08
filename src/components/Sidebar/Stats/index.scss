@@ -1,0 +1,62 @@
+.trell-stats {
+    .trell-stat-row {
+        border-top: 1px solid #3D3D3D;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        font-size: 15px;
+
+        &:last-child {
+            border-bottom: 1px solid #3D3D3D;
+        }
+
+        &.sharing-links {
+            p {
+                margin-left: .75rem;
+            }
+
+            .sharing-icon {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 20px;
+
+                a {
+                    display: block;
+                }
+
+                &.facebook {
+                    background-color: #3D5A98;
+                }
+
+                &.twitter {
+                    margin-left: -2px;
+                    background-color: #1DA1F2;
+                }
+            }
+        }
+
+        &.trell-stat-metric {
+
+            &.likes {
+                .icon {
+                    color: red;
+                }
+            }
+
+            .icon {
+                font-size: 16px;
+
+            }
+
+            .label {
+                margin-left: .75rem;
+            }
+
+            .count {
+                margin-left: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.slide-gradient {
+    background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(47,17,28,1) 75%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(47,17,28,1) 75%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(47,17,28,1) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#2f111c',GradientType=0 ); /* IE6-9 */
+}
+
+.fullAbsoluteContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.translucentRoundedContainer {
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 4px;
+    padding: .5rem .75rem;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.circle {
+    $size: 75px;
+
+    width: $size;
+    height: $size;   
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.textShadow {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
