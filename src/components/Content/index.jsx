@@ -44,7 +44,7 @@ class Content extends Component {
                         <i className="fas fa-chevron-left"></i>
                     </div>
                     <div
-                        disabled={currentSlide === posts.length - 1}
+                        disabled={currentSlide === (posts.length + 2) - 1}
                         onClick={this.handleNext}
                         className="slider-control next">
                         <i className="fas fa-chevron-right"></i>
